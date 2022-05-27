@@ -34,10 +34,7 @@ public class FileReadTestCase {
 
 	@Test
 	public void 파일읽기테스트() throws IOException {
-		char[] data = {'h', 'e', 'l', 'l', 'o'};
-		char[] cbuf = new char[5];
-		reader.read(cbuf);
-		assertArrayEquals(data, cbuf);
+		
 	}
 
 }
