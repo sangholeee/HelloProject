@@ -1,6 +1,6 @@
 package com.goodee.hello;
 
-import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -9,7 +9,12 @@ import java.io.IOException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes={})
 public class FileReadTestCase {
 
 	private FileReader reader;
@@ -34,7 +39,7 @@ public class FileReadTestCase {
 
 	@Test
 	public void 파일읽기테스트() throws IOException {
-		
+		assertEquals(5, reader.toString().length());
 	}
 
 }
